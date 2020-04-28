@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 네임을 정확하게 작성해야한다 -->
+<mapper namespace="kr.manamana.file.dao.FileGuestDAO"> 
+<!-- 전체개수구하기 -->
+<select id="selectCount" resultType="int">
+ select count(*) from fileguestbook
+</select>
+<!-- 1개구하기 -->
+<select id="selectByIdx" parameterType="int" resultType="FileGuestVO">
+select * from fileguestbook where idx=#{idx}
+</select>
+<!-- 1페이지구하기 -->
+<select id="selectList" parameterType="HashMap" resultType="FileGuestVO">
+   <![CDATA[
+   select
+       Q.*
+   from
+     (select 
+         rownum rnum, R.*
+    from
+       (select * from fileguestbook order by idx desc)R
+   where
+       rownum<=#{endNo}) Q
+    where
+        rnum>=#{startNo}  
+   ]]>
+</select>
+<!-- 저장-->
+<insert id="insert" parameterType="FileGuestVO">
+insert into fileguestbook values (fileguestbook_idx_seq.nextval,#{name},#{password},#{content},SYSDATE)
+</insert>
+<!-- 수정-->
+<update id="update" parameterType="FileGuestVO">
+update fileguestbook set content=#{content}, regdate=sysdate where idx=#{idx}
+</update>
+<!-- 삭제 -->
+<delete id="delete" parameterType="int">
+delete from fileguestbook where idx=#{idx}
+</delete>
+
+</mapper>
+

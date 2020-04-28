@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<!-- 스프링 시크리트 암호화 객체  -->
+	<!-- 스프링 시크리트 암호화 객체  -->
+	<beans:bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />  
+	
+	<security:http auto-config="true" use-expressions="true">
+		<security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
+
+
+		<!-- access denied page -->
+		<security:form-login login-page="/login"
+			default-target-url="/" 
+			login-processing-url="/loginOk"
+			username-parameter="userid"
+		    password-parameter="password" />
+		<security:logout logout-url="/logout"
+			logout-success-url="/" invalidate-session="true" />
+		<security:access-denied-handler
+			error-page="/admin/403" />
+		<!-- enable csrf protection -->
+		<security:csrf disabled="true" /><!-- 1.몰랐던거 -->
+	</security:http>
+
+	<security:authentication-manager>
+		<security:authentication-provider>
+			<security:jdbc-user-service
+				data-source-ref="dataSource"
+				users-by-username-query="select userid username, password password, 1 as enabled from member where userid=?"
+				authorities-by-username-query="select username, role from member_role where username =?" />
+		  <security:password-encoder ref="bcryptPasswordEncoder"/>
+		</security:authentication-provider>
+	</security:authentication-manager>
+	
+</beans:beans>

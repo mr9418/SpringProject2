@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.manamana.file.dao.FileBoardFilesDAO">
+<!-- 0. 해당 글번호 가져오기  -->
+	<select id="selectByIdx" parameterType="int" resultType="FileBoardFilesVO">
+		select 
+			*
+		from 
+			fileBoard_Files
+		where
+			idx=#{idx}
+	</select>
+<!--1 몇번글의 파일이 몇개인지 개수 구하기 -->
+<select id="selectCount" parameterType="int" resultType="int">
+select count(*) from fileBoard_Files where ref=#{ref}
+</select>
+<!--2몇번글의 파일의 목록구하기-->
+<select id="selectList" parameterType="int" resultType="FileBoardFilesVO">
+select * from fileBoard_Files where ref=#{ref}
+</select>
+<!--3저장하기 -->
+<insert id="insert" parameterType="FileBoardFilesVO">                                                        
+insert into FileBoard_Files values (FileBoard_Files_idx_seq.nextval,#{ref},#{oFile},#{sFile})
+</insert>
+<!--4. 1개삭제하기 -->
+<delete id="deleteByIdx" parameterType="int">
+delete from  FileBoard_Files where idx=#{idx}
+</delete>
+<!--5. 같은 ref모두 삭제하기(5번파일을 지우면 그 파일에 첨부한 파일들도 다같이 삭제) -->
+<delete id="deleteByRef" parameterType="int">
+delete from FileBoard_Files where ref=#{ref}
+</delete>
+</mapper>	

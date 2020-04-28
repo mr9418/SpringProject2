@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.manamana.file.dao.CommentDAO">
+	<!-- 1개 구하기  매퍼의 파라미터타입과 result타입을 주의하자-->
+	<select id="selectCount" parameterType="int" resultType="int">
+		select count(*) from filecomment where ref=#{ref}
+	</select>
+	<!-- 1페이지 구하기 -->
+	<select id="selectList" parameterType="int" resultType="CommentVO">
+         select * from filecomment where ref=#{ref}
+	</select>
+	<select id="selectByIdx" parameterType="int" resultType="CommentVO">
+	 select * from filecomment where idx=#{idx}
+	</select>
+	<!-- 저장 -->
+	<insert id="insert" parameterType="CommentVO">
+		insert into filecomment values (comment_idx_seq.nextval,#{ref},#{name},#{password},#{content},SYSDATE,#{ip})
+	</insert>
+	<!-- 수정 -->
+	<update id="update" parameterType="CommentVO">
+		update filecomment set content=#{content}, regdate=SYSDATE, ip=#{ip} where idx=#{idx}
+	</update>
+	<!-- 삭제 -->
+	<delete id="delete" parameterType="int">
+		delete from filecomment where idx=#{idx}
+	</delete>
+</mapper>

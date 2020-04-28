@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.manamana.file.dao.FileBoardDAO">
+	<!-- 1.전체개수구하기 -->
+	<select id="selectCount" resultType="int">
+		select count(*) from fileboard
+	</select>
+	<!-- 2 1개구하기 -->
+	<select id="selectByIdx" parameterType="int"
+		resultType="FileBoardVO">
+		select * from fileboard where idx=#{idx}
+	</select>
+	<!-- 3.1페이지구하기 -->
+	<select id="selectList" parameterType="HashMap"
+		resultType="FileBoardVO">
+   <![CDATA[
+	     select
+	        Q.*
+	     from
+              ( 
+               select 
+                  rownum rnum, R.*
+               from 
+                  (select * from fileboard order by idx desc) R 
+               where
+                 rownum<=#{endNo}
+               ) Q
+	     where
+	        rnum>=#{startNo}
+     ]]>
+	</select>
+	<!-- 4.저장하기 -->
+	<insert id="insert" parameterType="FileBoardVO">
+		insert into fileBoard values
+		(fileBoard_idx_seq.nextval,#{name},#{password},#{subject},#{content},SYSDATE,#{ip})
+	</insert>
+	<!-- 5.수정하기 -->
+	<update id="update" parameterType="FileBoardVO">
+		update fileBoard set content=#{content}, regDate=SYSDATE, ip=#{ip} where
+		idx=#{idx}
+	</update>
+	<!-- 6.삭제하기 -->
+	<delete id="delete" parameterType="int">
+		delete from fileBoard where idx=#{idx}
+	</delete>
+	<!-- 7.마지막에 저장한 글의 idx구하기 -->
+	<select id="getLastIdx" resultType="int">
+		select MAX(idx) from fileBoard
+	</select>
+</mapper>
