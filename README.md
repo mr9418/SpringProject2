@@ -47,7 +47,6 @@ ADMIN은 ROLE_USER와 ROLE_ADMIN 두 개의 권한을 가지고있습니다
 
 # FrameWork 설계
 [ Spring 4.3.2 ]
-* Annotaion Driven을 통한 컨트롤러 호출
 * Resource Mapping을 통한 리소스 폴더 관리
 [ Spring 4.2.3 ]
 * 비밀번호 암호화를 통한 보안강화
