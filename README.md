@@ -82,7 +82,7 @@ security-context의 부분입니다
  password-encoder는 bcryptPasswordEncoder를 사용하였고 권한은 member테이블에 저장되어있는 userid 하나를 들고와서 member_role테이블에 username으로 지정하였습니다
 ![20200428_215130](https://user-images.githubusercontent.com/59599438/80489330-9e2dec00-899a-11ea-8dd0-d704ab19783f.png)
 
-
+ 메일샌더를 이용해서 회원가입한 유저의 이메일로 회원가입환영 메일을 보냈습니다
 ![m1](https://user-images.githubusercontent.com/59599438/80496658-7a6fa380-89a4-11ea-9d2f-1debc269e586.png)
 
 ![m2](https://user-images.githubusercontent.com/59599438/80496674-7e032a80-89a4-11ea-8554-c9c8090173fc.png)
