@@ -12,7 +12,8 @@
 
 # Communicate Board with attachment
 <hr>
-
+ User- 아이디:mr9418@naver.com 비밀번호:1234 
+ admin- 아이디:admin@naver.com 비밀번호:1234
 
 Communicate 게시판은 로그인한 사용자들끼리 서로의 정보를 파일로 올려 공유하고 방명록을 이용해 친목 동호가 가능한 게시판입니다
 로그인한 사용자만 게시글의 작성이 가능하며 To-do List를 작성해 자신의 계획도 함께 세울 수 있습니다
