@@ -9,8 +9,6 @@
 a-84e1-9![20200428_202800](https://user-images.githubusercontent.com/59599438/80486661-83597880-8996-11e0b42a8f3b74.png)
 
 #admin계정로그인시
-
-![intro](https://user-images.githubusercontent.com/59599438/80486788-b439ad80-8996-11ea-9b7a-172478444976.png)
-![20200428_203026](https://user-images.githubusercontent.com/59599438/80486816-bd2a7f00-8996-11ea-8c28-b3adad281e1f.png)
+![20200428_212438](https://user-images.githubusercontent.com/59599438/80487055-290ce780-8997-11ea-8641-86b7315bd933.png)
 ![admin](https://user-images.githubusercontent.com/59599438/80486830-c1ef3300-8996-11ea-8da9-60f342f4a6ae.png)
 ![ad2](https://user-images.githubusercontent.com/59599438/80486853-cd425e80-8996-11ea-9f91-dcce99a704b2.png)
