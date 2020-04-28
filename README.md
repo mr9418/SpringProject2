@@ -60,6 +60,6 @@ PagingVO에서 List를 가져올때 memberDAO에 있는 selectRoleList를 사용
 ![20200428_215012](https://user-images.githubusercontent.com/59599438/80489315-99693800-899a-11ea-968c-59c2b0889d31.png)
 
 
-<security-context>의 부분입니다
+security-context의 부분입니다
  password-encoder는 bcryptPasswordEncoder를 사용하였고 권한은 member테이블에 저장되어있는 userid 하나를 들고와서 member_role테이블에 username으로 지정하였습니다
 ![20200428_215130](https://user-images.githubusercontent.com/59599438/80489330-9e2dec00-899a-11ea-8dd0-d704ab19783f.png)
