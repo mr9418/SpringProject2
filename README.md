@@ -47,9 +47,19 @@ ADMIN은 ROLE_USER와 ROLE_ADMIN 두 개의 권한을 가지고있습니다
 
 
 # CODE
-회원가입을 한 유저가 자동으로 'ROLE_USER'의 권한을 가지게하였습니다.  
+회원가입 후 DB에 저장을 할 시 자동으로 USER_ROLE의 권한을 갖도록 하였습니다. 
 ![20200428_214929](https://user-images.githubusercontent.com/59599438/80489302-94a48400-899a-11ea-934e-70b6f1748fef.png)
 
 
+DB에 저장을 하면 비밀번호가 bcryptPasswordEncoder에 의해서 암호화로 바뀌도록 설정하였습니다
+![20200428_202726](https://user-images.githubusercontent.com/59599438/80489505-e0efc400-899a-11ea-9e2a-f2dcf66f9cef.png)
+
+memberVO와memberRoleVO에 있는 객체들을 연결시키기위해 사용한코드입니다 
+PagingVO에서 List를 가져올때 memberDAO에 있는 selectRoleList를 사용하여 member_role테이블의 username을 가져왔습니다
+그리고 userid(username)을 키 값으로 지정해 for문을 사용해 DB에 저장되어있는 username이 있을 시 role도 같이 가져올수있도록 설정하였습니다
 ![20200428_215012](https://user-images.githubusercontent.com/59599438/80489315-99693800-899a-11ea-968c-59c2b0889d31.png)
+
+
+<security-context>의 부분입니다
+ password-encoder는 bcryptPasswordEncoder를 사용하였고 권한은 member테이블에 저장되어있는 userid 하나를 들고와서 member_role테이블에 username으로 지정하였습니다
 ![20200428_215130](https://user-images.githubusercontent.com/59599438/80489330-9e2dec00-899a-11ea-8dd0-d704ab19783f.png)
