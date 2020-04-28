@@ -7,6 +7,8 @@
 
 사용기술 - Java, Jsp, Spring, Oracle, JS,jQuery,BootStrap,Html,css
 
+전체화면구현은 https://www.notion.so/Project-2-Communicate-board-90ab09295f5e4c6393e503561c62956c 을 통해서 확인하실 수 있습니다
+
 
 # Communicate Board with file
 <hr>
