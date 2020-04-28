@@ -6,7 +6,7 @@
 ![1](https://user-images.githubusercontent.com/59599438/80486558-50af8000-8996-11ea-93da-90f4fdd6e530.png)
 ![2](https://user-images.githubusercontent.com/59599438/80486567-560cca80-8996-11ea-9c86-467c14b9218b.png)
 ![3](https://user-images.githubusercontent.com/59599438/80486575-5a38e800-8996-11ea-9af3-9ea5eeb85ea2.png)
-
+![20200428_203026](https://user-images.githubusercontent.com/59599438/80487294-8acd5180-8997-11ea-8ad0-9c784af515d1.png)
 
 #admin계정로그인시
 ![20200428_212438](https://user-images.githubusercontent.com/59599438/80487055-290ce780-8997-11ea-8641-86b7315bd933.png)
