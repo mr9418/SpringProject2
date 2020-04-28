@@ -47,4 +47,9 @@ ADMIN은 ROLE_USER와 ROLE_ADMIN 두 개의 권한을 가지고있습니다
 
 
 # CODE
+회원가입을 한 유저가 자동으로 'ROLE_USER'의 권한을 가지게하였습니다.  
+![20200428_214929](https://user-images.githubusercontent.com/59599438/80489302-94a48400-899a-11ea-934e-70b6f1748fef.png)
 
+
+![20200428_215012](https://user-images.githubusercontent.com/59599438/80489315-99693800-899a-11ea-968c-59c2b0889d31.png)
+![20200428_215130](https://user-images.githubusercontent.com/59599438/80489330-9e2dec00-899a-11ea-8dd0-d704ab19783f.png)
