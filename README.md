@@ -5,7 +5,7 @@
 
 사용도구 - Eclipse, Dbeaver, MyBatis, Oracle, Spring Framework 
 
-사용기술 - Java, Jsp, Spring3.0, Oracle 11g, JS,jQuery, XML
+사용기술 - Java, Jsp, Spring, Oracle, JS,jQuery,BootStrap,Html,css
 
 
 # Communicate Board with file
