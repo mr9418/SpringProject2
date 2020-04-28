@@ -44,3 +44,7 @@ Spring security를 사용하여 user가 관리자(admin)의 페이지로 이동�
 권한은 유저멤버에 있는 USERID를 가져와서 USER_ADMIN으로 지정하였습니다 .
 ADMIN은 ROLE_USER와 ROLE_ADMIN 두 개의 권한을 가지고있습니다
 ![ad2](https://user-images.githubusercontent.com/59599438/80486853-cd425e80-8996-11ea-9f91-dcce99a704b2.png)
+
+
+# CODE
+
