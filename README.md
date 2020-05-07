@@ -54,18 +54,28 @@ ADMIN은 ROLE_USER와 ROLE_ADMIN 두 개의 권한을 가지고있습니다
 
 # FrameWork 설계
 [ Spring 4.3.2 ]
+
 * Resource Mapping을 통한 리소스 폴더 관리
-[ Spring 4.2.3 ]
+
 * 비밀번호 암호화를 통한 보안강화
+
 [ MyBatis ]
+
 * MyBatis와 Oracle 연동 구현
 * Connection Pool 셋팅을 통한 DB 연결 최적화
+
 [ Log4j ]
+
 * 패키지별 로그 설정을 하여 디버깅 효율성 향상
+
 [ Maven ]
+
 * 라이브러리 관리를 위해 사용
+
 [Dbeaver]
+
 * 테이블관리를 위해 사용
+
 
 # CODE
 회원가입 후 DB에 저장을 할 시 자동으로 USER_ROLE의 권한을 갖도록 하였습니다. 
