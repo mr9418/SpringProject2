@@ -1,4 +1,4 @@
-# SpringProject2
+# Community Board with attachment
 <hr>
 개발환경 - Windows10
 
@@ -10,7 +10,7 @@
 전체화면구현은 https://www.notion.so/Project-2-Communicate-board-90ab09295f5e4c6393e503561c62956c 을 통해서 확인하실 수 있습니다
 
 
-# Community Board with attachment
+
 <hr>
  User- 아이디:mr9418@naver.com 비밀번호:1234 
  
