@@ -21,17 +21,7 @@
 <style type="text/css">
  table{width:800px; margin:auto; border:none;}
 </style>
-<script type="text/javascript">
-// 삭제
-// 삭제
-	function memoDelete(idx){
-		//alert($("#name"+idx).html() + "\n" + $("#content"+idx).html());
-		$("#memoForm").attr("action","deleteOk");
-		$("#submitBtn").attr('value','삭제');
 
-
-	}
-</script>
 
 </head>
 <body>   
