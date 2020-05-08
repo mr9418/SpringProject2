@@ -33,7 +33,7 @@ Spring security를 사용하여 user가 관리자(admin)의 페이지로 이동�
 ![1](https://user-images.githubusercontent.com/59599438/80486558-50af8000-8996-11ea-93da-90f4fdd6e530.png)
 
 * 방명록게시판 :User만 게시글 작성이 가능하도록만들었습니다. 
-![2](https://user-images.githubusercontent.com/59599438/80486567-560cca80-8996-11ea-9c86-467c14b9218b.png)
+![방명록](https://user-images.githubusercontent.com/59599438/81379936-f60be600-9144-11ea-8da8-b2aef4c4d40a.png)
 
 * To-do List게시판:DONE과 진행중으로 나누어 계획이 실천되었을 시 DONE으로 수정이 가능합니다
 ![3](https://user-images.githubusercontent.com/59599438/80486575-5a38e800-8996-11ea-9af3-9ea5eeb85ea2.png)
